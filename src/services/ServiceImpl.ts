@@ -27,7 +27,7 @@ class ServiceImpl implements Service {
         }
     }
 
-    async updateBooking(id: string, body: any): Promise<any> {
+    async updateBooking(id: string, body: any,flag?:false): Promise<any> {
         try {
             const updatedBooking = await Booking.findByIdAndUpdate(id, body, {
                 new: true, // return the updated document

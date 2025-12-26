@@ -16,6 +16,7 @@ class BookingRouter{
         this.router.put('/update/resource/:id',bookingController.updateBooking);
         this.router.delete("/delete/bookingby/:id",bookingController.deleteBooking);
         this.router.get('/find/bookingby/:id',bookingController.bookingByID);
+        this.router.patch('/accept/booking/:id',bookingController.acceptBookign);
     }
 }
 export default new BookingRouter().router;
